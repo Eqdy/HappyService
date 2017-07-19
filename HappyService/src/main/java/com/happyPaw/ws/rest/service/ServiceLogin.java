@@ -16,11 +16,13 @@ public class ServiceLogin {
 	@Path("/validarUsuario")
 	@Consumes({MediaType.APPLICATION_JSON})
 	@Produces({MediaType.APPLICATION_JSON})
+	
 	public String validarUsuario(){
-//		vo.setUserValido(false);
-//		if(vo.getUsuario().equals("ER") && vo.getPassword().equals("12345")){
-//			vo.setUserValido(true);
-//		}
+		VOUsuario vo=new VOUsuario();
+		vo.setUserValido(false);
+		if(vo.getUsuario().equals("ER") && vo.getPassword().equals("12345")){
+			vo.setUserValido(true);
+		}
 		return "listo";
 	}
 }
